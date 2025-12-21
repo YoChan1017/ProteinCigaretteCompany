@@ -1,7 +1,7 @@
 # 퍼블릭 클라우드 DevSecOps 융합 인재 양성 과정 
-> Project_02_ProteinCigarette
+> Project_02_ProteinCigaretteCompany
 ## Project Overview
->프로젝트 명 : ProteinCigarette<br>
+> 프로젝트 명 : ProteinCigaretteCompany (PCC)<br>
 > 주제 : 가상 기업(ProteinCigarette)의 비즈니스 모델 및 가치 소개<br>
 > 개발 목표 : Spring Tool Suite(STS) 환경에서의 정적 웹 페이지 퍼블리싱.<br>
 
