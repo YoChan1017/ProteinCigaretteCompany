@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thrid Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+    <style>
+        #map {
+            height: 550px; /* Map height */
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 15px; /* 모서리 둥글게 */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1.major {
+            color: black; /* Change the title color to black */
+        }
+        h3 {
+            color: black; /* Change the title color to black */
+        }
+    </style>
+</head>
+<body>
+    <div th:replace="header.html"></div>
+
+	<div id="wrapper">
+	<section id="main" class="wrapper">
+	<div class="inner">
+        <h1 class="major">찾아오시는 길</h1>
+        <h3>주소</h3>
+        <p>경상북도 울릉군 울릉읍 독도 옆 북동쪽 해저 506m</p>
+        <div id="map"></div>
+        <br><br>
+        <h3>주차 관련 정보</h3>
+        <p>동해항 옆 공영주차장 이용 가능<br>
+        > 이용료 : 시간당 5000원</P>
+        <hr>
+        <h3>픽업 안내</h3>
+        <p>강원도 동해항으로 오시면 회사에서 헬리콥터로 픽업 해 드립니다.<br>
+        > 주차장에서 350m 떨어져있습니다.</p>
+        <div class="map-image-container" style="display: flex; align-items: center; gap: 10px;">
+		    <div id="small-map" style="height: 220px; width: 300px; border: 1px solid #ccc; border-radius: 15px;"></div>          
+		    <div class="image-container">
+		        <img src="/images/pickup.jpg" alt="Pickup Location" style="height: 210px; width: 300px; object-fit: cover; border: 1px solid #ccc; border-radius: 15px;">
+		    </div>
+		</div>
+    </div>
+    <br>
+    </section>
+    </div>
+	
+	<div th:replace="footer.html"></div>
+
+    <!-- Google Maps API -->
+    <script>
+        // Google Maps 초기화 함수
+        function initMap() {
+            // 큰 지도 위치 좌표
+            var companyLocation = { lat: 37.248246, lng: 131.874923 }; // 회사 위치 (위도, 경도)
+            
+            // 큰 지도 설정
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 0, // 지도의 확대 수준 설정
+                center: companyLocation // 지도의 초기 중심 위치 설정
+            });
+			
+			// 확대 애니메이션 효과
+						function gradualZoom(map, targetZoom) {
+						    var currentZoom = map.getZoom();
+						    var interval = setInterval(function () {
+						        if (currentZoom < targetZoom) {
+						            currentZoom++;
+						            map.setZoom(currentZoom);
+						        } else {
+						            clearInterval(interval);
+						        }
+						    }, 250); // 250ms마다 줌 레벨을 1씩 증가
+						}
+
+						// 페이지 로드 후 확대 애니메이션 실행 (목표 줌 레벨 설정)
+						gradualZoom(map, 14); // 목표 줌 레벨을 14로 설정
+						
+            var marker = new google.maps.Marker({
+                position: companyLocation, // 마커의 위치 설정
+                map: map // 마커가 표시될 지도 설정
+            });
+            
+            // 작은 지도 위치 좌표 (예: 다른 장소 설정)
+            var smallMapLocation = { lat: 37.4892512, lng: 129.1231538 }; // 강원도 동해항 위치 좌표
+
+            // 작은 지도 설정
+            var smallMap = new google.maps.Map(document.getElementById("small-map"), {
+                zoom: 14.5, // 작은 지도 확대 수준 설정
+                center: smallMapLocation // 작은 지도 초기 중심 위치 설정
+            });
+            var smallMarker = new google.maps.Marker({
+                position: smallMapLocation, // 작은 지도 마커의 위치 설정
+                map: smallMap // 마커가 표시될 작은 지도 설정
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaxkQq0FtYrs9CacWAygrl9gl99oRMifg&callback=initMap"></script>
+</body>
+</html>

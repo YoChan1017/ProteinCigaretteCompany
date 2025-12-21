@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fourth Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1.major {
+            color: black; /* Change the title color to black */
+        }
+        h3 {
+            color: black; /* Change the title color to black */
+        }
+        
+        .demo-details-juqery-accordion {
+    		padding: 0 2rem;
+    		background-color: rgba(102, 178, 255, 0.1); /* 연한 파란색 */
+    		border: 1px solid #66B2FF; /* 연한 파란색 경계선 */
+    		border-radius: 0.5rem;
+    		margin-bottom: 1rem;
+		}
+		.demo-details-juqery-accordion:last-child {
+    		margin-bottom: 0;
+		}
+		.demo-details-juqery-accordion summary::-webkit-details-marker {
+    		display: none;
+		}
+		.demo-details-juqery-accordion summary {
+    		display: block;
+    		padding: 2rem 3rem 2rem 0;
+    		font-weight: 600;
+    		cursor: pointer;
+    		position: relative;
+    		color: #0056b3; /* 진한 파란색 텍스트 */
+		}
+		.demo-details-juqery-accordion summary::before,
+		.demo-details-juqery-accordion summary::after {
+    		content: "";
+    		position: absolute;
+    		width: 1rem;
+    		height: 2px;
+    		background-color: #0056b3; /* 진한 파란색 아이콘 */
+    		right: 1rem;
+    		top: 2.5rem;
+		}
+		.demo-details-juqery-accordion summary::after {
+    		transform: rotateZ(90deg);
+		}
+		.demo-details-juqery-accordion p {
+    		padding-bottom: 2rem;
+    		display: none;
+		}
+		.demo-details-juqery-accordion[open] summary::after {
+    		display: none;
+		}
+    </style>
+</head>
+<body>
+    <div th:replace="header.html"></div>
+
+	<div id="wrapper">
+		<section id="main" class="wrapper">
+		<div class="inner">
+        	<h1 class="major">FAQ</h1>
+        	<div>
+        	<details class="demo-details-juqery-accordion">
+        		<summary>1. PCC란?</summary>
+        		<p>- Protein Cigarette Company 의 약자로 프로틴 담배를 주 제품으로 다양한 형태의 단백질 흡수를 위한 제품을 만드는 회사입니다.</p>
+        	</details>
+        	<details class="demo-details-juqery-accordion">
+        		<summary>2. 인체엔 해롭지 않나요?</summary>
+        		<p>- PCC의 제품들은 전부 FDA 승인이 된 제품들입니다.</p>
+        	</details>
+        	<details class="demo-details-juqery-accordion">
+        		<summary>3. 단백질 함량이 어느정도인가요?</summary>
+        		<p>- 프로틴 담배- 30g<br>
+				- 프로틴 알약- 20g<br>
+				- 프로틴 패치- 40g<br>
+				- 독도 프로틴 암반수 -25g</p>
+        	</details>
+        	<details class="demo-details-juqery-accordion">
+        		<summary>4. 제품 구매는 어떻게 하나요?</summary>
+        		<p>- PCC 공식 온라인 몰에서 구매 가능합니다.</p>
+        	</details>
+        	<details class="demo-details-juqery-accordion">
+        		<summary>5. 배송은 언제 오나요?</summary>
+        		<p>- 주문일 기준 2~3일 정도 걸립니다.</p>
+        	</details>
+        	<details class="demo-details-juqery-accordion">
+        		<summary>기타</summary>
+        		<p>- 연락처로 문의주세요.<br>
+        		( 전화번호 : 02-1234-5678 | 이메일 : pcc2024@protein.com )</p>
+        	</details>
+        	</div>
+    	</div>
+    	</section>
+    </div>
+    
+    <br><br><br>
+    
+    <div th:replace="footer.html"></div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+    <script>
+    const $_details = $(".demo-details-juqery-accordion");
+    const $_summary = $_details.find("summary");
+
+    $_summary.on("click", function(e) {
+        e.preventDefault();
+
+        const $_this = $(this);
+        const $_this_details = $_this.parent("details");
+        const $_this_details_p = $_this_details.find("p");
+        const $_this_details_open = $_this_details.attr("open");
+
+        if (! $_this_details_open) {
+            $_this_details.prop("open", true);
+            $_this_details_p.stop().slideDown(600);
+        } else {
+            $_this_details_p.stop().slideUp(300, function() {
+                $_this_details.prop("open", false);
+            });
+        }
+    });
+	</script>
+</body>
+</html>

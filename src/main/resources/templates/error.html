@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error Page</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<style>
+	body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1.major {
+            color: black; /* Change the title color to black */
+        }
+        h3 {
+            color: black; /* Change the title color to black */
+        }
+	</style>
+</head>
+<body class="is-preload">
+	<div th:replace="header.html"></div>
+	
+		<div id="wrapper">
+				<section id="main" class="wrapper">
+					<div class="inner">
+    					<h1 class="major">Error</h1>
+    					<p th:text="${errorMessage}">An error occurred.</p>
+    					<a href="/index">> Go back to home</a>
+    			</div>
+    		</section>
+		</div>
+		
+	<br><br>
+    
+    <div th:replace="footer.html"></div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

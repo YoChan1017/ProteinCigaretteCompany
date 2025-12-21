@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Second Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1.major {
+            color: black; /* Change the title color to black */
+        }
+        .product-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            padding: 0 5%;
+        }
+        .product-item {
+            position: relative;
+            width: 22%; /* Adjusted for a more spacious layout */
+            margin: 10px; /* Added margin for spacing */
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex; /* Added flex for equal height */
+            flex-direction: column; /* Ensures consistent item arrangement */
+        }
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .product-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1; /* Allows equal height for all product info */
+        }
+        .product-info p {
+            margin: 5px 0;
+        }
+        .product-info p:first-of-type {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .product-info p:last-of-type {
+            font-size: 14px;
+            font-weight: 400;
+            color: #555; /* Softer color for description */
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div th:replace="header.html"></div>
+
+    <div id="wrapper">
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">PCC 제품 소개</h1>
+                <div class="product-container">
+                    <!-- 프로틴 담배 -->
+                    <div class="product-item">
+                        <img src="/images/cigarette.jpg" alt="프로틴 담배">
+                        <div class="product-info">
+                            <p>프로틴 담배</p>
+                            <p>가격: 7,000원</p>
+                            <p>비타스틱과 같은 방식으로 흡연하며 단백질을 섭취할 수 있는 혁신적인 제품입니다.</p>
+                        </div>
+                    </div>
+                    <!-- 프로틴 알약 -->
+                    <div class="product-item">
+                        <img src="/images/pill.jpg" alt="프로틴 알약">
+                        <div class="product-info">
+                            <p>프로틴 알약</p>
+                            <p>가격: 15,000원</p>
+                            <p>물과 함께 삼켜 언제 어디서든 빠르고 손쉽게 단백질을 보충할 수 있는 편리한 제품입니다.</p>
+                        </div>
+                    </div>
+                    <!-- 프로틴 패치 -->
+                    <div class="product-item">
+                        <img src="/images/patch.jpg" alt="프로틴 패치">
+                        <div class="product-info">
+                            <p>프로틴 패치</p>
+                            <p>가격: 30,000원</p>
+                            <p>피부에 부착하여 단백질을 흡수하는 새로운 형태의 패치형 단백질 보충제입니다.</p>
+                        </div>
+                    </div>
+                    <!-- 독도 프로틴 암반수 -->
+                    <div class="product-item">
+                        <img src="/images/do.jpg" alt="독도 프로틴 암반수">
+                        <div class="product-info">
+                            <p>독도 프로틴 암반수</p>
+                            <p>가격: 20,000원</p>
+                            <p>단백질이 함유된 독도의 암반수로, 프로틴 워터로 간편하게 단백질을 섭취할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div th:replace="footer.html"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

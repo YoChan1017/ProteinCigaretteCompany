@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fourth Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1.major {
+            color: black; /* Change the title color to black */
+        }
+        h3 {
+            color: black; /* Change the title color to black */
+        }
+        
+        form {
+    		max-width: 600px;
+    		margin: 20px auto;
+		}
+		label {
+    		display: block;
+    		margin-bottom: 8px;
+    		color: #0056b3; /* 진한 파란색 텍스트 */
+		}
+		input, textarea {
+   			width: 100%;
+    		padding: 8px;
+    		margin-bottom: 16px;
+    		box-sizing: border-box;
+    		border: 1px solid #66B2FF; /* 연한 파란색 테두리 */
+    		border-radius: 4px; /* 모서리 둥글게 */
+		}
+		input[type="text"] {
+			border: 1px solid #66B2FF; /* 연한 파란색 테두리 */
+		}
+		input[type="email"] {
+			border: 1px solid #66B2FF; /* 연한 파란색 테두리 */
+		}
+		input[type="submit"] {
+    		background-color: #0056b3; /* 진한 파란색 배경 */
+    		color: white;
+    		cursor: pointer;
+    		border: none; /* 테두리 없애기 */
+		}
+		input[type="submit"]:hover {
+    		background-color: #004494; /* 호버 시 어두운 파란색 */
+		}
+    </style>
+</head>
+<body>
+    <div th:replace="header.html"></div>
+
+	<div id="wrapper">
+		<section id="main" class="wrapper">
+		<div class="inner">
+        	<h1 class="major">문의하기</h1>
+        	<form onsubmit="sendEmail(event)">
+    			<label for="name">이름:</label>
+    			<input type="text" id="name" name="name" required>
+    			<label for="email">이메일:</label>
+    			<input type="email" id="email" name="email" required>
+    			<label for="message">내용:</label>
+    			<textarea id="message" name="message" rows="4" required></textarea>
+    			<br>
+    			<input type="submit" value="보내기">
+			</form>
+    	</div>
+    	</section>
+    </div>
+    
+    <br><br><br>
+    
+    <div th:replace="footer.html"></div>
+    
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+    function sendEmail(event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var subject = "문의하기 폼: " + name;
+        var body = "이름: " + name + "\n이메일: " + email + "\n내용: " + message;
+        var mailtoLink = "mailto:your @ email.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        window.location.href = mailtoLink;
+    }
+	</script>
+</body>
+</html>
