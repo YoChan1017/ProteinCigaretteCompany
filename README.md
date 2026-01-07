@@ -1,13 +1,40 @@
 # 퍼블릭 클라우드 DevSecOps 융합 인재 양성 과정 
-> Project_02_ProteinCigaretteCompany
-## Project Overview
-> 프로젝트 명 : ProteinCigaretteCompany (PCC)<br>
-> 주제 : 가상 기업(ProteinCigarette)의 비즈니스 모델 및 가치 소개<br>
-> 개발 목표 : Spring Tool Suite(STS) 환경에서의 정적 웹 페이지 퍼블리싱.<br>
+Project_02_ProteinCigaretteCompany
 
-<br>
-ProteinCigarette는 독창적인 브랜드 네이밍을 바탕으로 한 가상의 기업 홍보 웹사이트 프로젝트입니다. 단순한 페이지 제작을 넘어, 기업의 브랜드 정체성을 웹 환경에서 효과적으로 전달하기 위한 UI/UX 설계와 실전 배포 프로세스를 학습하기 위해 기획되었습니다.
-<br><br><br>
+가상 기업 브랜드 웹 페이지
+
+> ProteinCigaretteCompany  
+> HTML · CSS · JavaScript · Spring · GoogleMapsAPI
+
+---
+
+## 프로젝트 개요
+**ProteinCigaretteCompany**는 팀 **ProteinCigarette**의 가상의 기업을 주제로 한 웹 사이트 제작 프로젝트입니다.
+
+웹 퍼블리싱의 기본 구조를 이해하고 HTML/CSS 기반 UI 구성 및 정적 페이지 배포 경험을 쌓는 것을 목표로 진행되었습니다.
+
+기업 소개 페이지 형식으로 구성되어 있으며 브랜드 콘셉트, 기업제품 소개, MapsAPI 사용으로 위치설명, 레이아웃 설계 등을 중심으로 구현되었습니다.
+
+---
+
+## 개발 목적
+
+- 웹 사이트의 **기본 구조 이해**
+- HTML / CSS 기반 **웹 퍼블리싱 실습**
+- 브랜드 콘셉트를 반영한 **UI/UX 구성 경험**
+- **Spring** 기반 프로젝트 구조 이해
+- 웹 페이지 **배포 흐름 학습**
+
+---
+
+## 기술 스택
+
+- HTML  
+- CSS  
+- JavaScript  
+- Spring
+
+---
 
 > [!NOTE]
 > https://evergreen3579.github.io/proteincigarette/
