@@ -1,40 +1,83 @@
-# 퍼블릭 클라우드 DevSecOps 융합 인재 양성 과정 
-Project_02_ProteinCigaretteCompany
+# 🚬 Protein Cigarette Company — 기업 소개 웹 페이지
 
-가상 기업 브랜드 웹 페이지
+> 퍼블릭 클라우드 DevSecOps 융합 인재 양성 과정 | Project 02
 
-> ProteinCigaretteCompany  
-> HTML · CSS · JavaScript · Spring · GoogleMapsAPI
+> 가상의 기업 **Protein Cigarette Company**를 주제로 제작한 기업 소개 웹 프로젝트입니다.
 
 ---
 
-## 프로젝트 개요
-**ProteinCigaretteCompany**는 팀 **ProteinCigarette**의 가상의 기업을 주제로 한 웹 사이트 제작 프로젝트입니다.
+## 🔗 배포 링크
 
-웹 퍼블리싱의 기본 구조를 이해하고 HTML/CSS 기반 UI 구성 및 정적 페이지 배포 경험을 쌓는 것을 목표로 진행되었습니다.
-
-기업 소개 페이지 형식으로 구성되어 있으며 브랜드 콘셉트, 기업제품 소개, MapsAPI 사용으로 위치설명, 레이아웃 설계 등을 중심으로 구현되었습니다.
+**👉 [https://evergreen3579.github.io/proteincigarette/](https://evergreen3579.github.io/proteincigarette/)**
 
 ---
 
-## 개발 목적
+## 📌 프로젝트 개요
 
-- 웹 사이트의 **기본 구조 이해**
-- HTML / CSS 기반 **웹 퍼블리싱 실습**
-- 브랜드 콘셉트를 반영한 **UI/UX 구성 경험**
-- **Spring** 기반 프로젝트 구조 이해
-- 웹 페이지 **배포 흐름 학습**
-
----
-
-## 기술 스택
-
-- HTML  
-- CSS  
-- JavaScript  
-- Spring
+| 항목 | 내용 |
+|------|------|
+| **프로젝트 유형** | 개인 포트폴리오 / 가상 기업 소개 웹 페이지 |
+| **제작 목적** | UI/UX 설계 및 웹 개발 역량 시연 |
+| **기업 컨셉** | 단백질을 담배 · 패치 · 알약 형태로 공급하는 가상의 혁신 헬스케어 기업 |
+| **개발 구분** | 개인 프로젝트 |
+| **배포 방식** | GitHub Pages를 통한 정적 웹 호스팅 |
+| **주요 언어** | HTML5, CSS3, JavaScript |
 
 ---
 
-> [!NOTE]
-> https://evergreen3579.github.io/proteincigarette/
+## 🖥️ 주요 페이지 구성
+
+| 섹션 | 설명 |
+|------|------|
+| **Hero / 메인 배너** | 브랜드 비전 및 핵심 메시지 전달, 인트로 애니메이션 적용 |
+| **제품 소개 (Products)** | 담배 · 패치 · 알약 · 픽업 등 4종의 제품 라인업 카드형 UI로 소개 |
+| **회사 소개 (About)** | 기업 철학, 설립 배경, 핵심 가치 및 비전 서술 |
+| **팀 소개 (Team)** | 팀원 프로필 이미지와 역할 소개, 그리드 레이아웃 구성 |
+| **푸터 (Footer)** | 브랜드 카피 및 페이지 내 내비게이션 링크 |
+
+---
+
+## 🛠️ 기술 스택
+
+| 분류 | 기술 |
+|------|------|
+| **Backend** | Spring Boot |
+| **Frontend** | HTML5, CSS3, JavaScript |
+| **정적 리소스** | Spring Boot Static Resources (`/static/`) |
+| **버전 관리** | Git / GitHub |
+| **배포** | GitHub Pages |
+
+---
+
+## 💡 기획 의도
+
+> **"단백질 보충의 새로운 형태"** 라는 독창적인 컨셉을 통해  
+> 제품 다양성, 브랜드 아이덴티티, 팀 소개까지 포함한  
+> 실제 기업 사이트와 유사한 구조의 웹 페이지를 설계하였습니다.
+
+- 가상의 기업 설정을 통해 **브랜딩 · 기획 · 개발을 일관되게** 경험
+- 실제 서비스 사이트를 참고한 **섹션 구조 설계** 및 사용자 흐름(UX Flow) 연습
+- Spring Boot의 정적 파일 서빙 구조(`/static/`) 이해 및 적용
+- GitHub Pages를 활용한 **정적 사이트 배포 파이프라인** 구성 경험
+
+---
+
+## 🎯 구현 포인트
+
+- 단일 페이지(SPA 형태) 내 섹션 스크롤 내비게이션 구현
+- 제품 카드 레이아웃을 CSS Flexbox / Grid로 반응형 구성
+- 팀 소개 섹션에서 이미지와 텍스트를 결합한 그리드 레이아웃 설계
+- 이미지 리소스를 Spring Boot `/static/images/` 경로로 체계적으로 관리
+- GitHub Pages 배포를 위한 정적 파일 분리 및 경로 최적화
+
+---
+
+## 📬 Contact
+
+프로젝트 관련 문의는 GitHub를 통해 확인해 주세요.
+
+---
+
+<p align="center">
+  <sub>이 프로젝트는 퍼블릭 클라우드 DevSecOps 융합 인재 양성 과정의 일환으로 제작된 가상의 기업 소개 웹 페이지입니다.</sub>
+</p>
