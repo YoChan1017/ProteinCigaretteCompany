@@ -43,7 +43,6 @@
 
 | 분류 | 기술 |
 |------|------|
-| **Backend** | Spring Boot |
 | **Frontend** | HTML5, CSS3, JavaScript |
 | **정적 리소스** | Static Resources (`/static/`) |
 | **버전 관리** | Git / GitHub |
