@@ -10,6 +10,8 @@
 
 **👉 [https://evergreen3579.github.io/proteincigarette/](https://evergreen3579.github.io/proteincigarette/)**
 
+<img width="761" height="825" alt="PCC_main" src="https://github.com/user-attachments/assets/71717b7c-e52d-4386-a918-7b86c9dbc2aa" />
+
 ---
 
 ## 📌 프로젝트 개요
