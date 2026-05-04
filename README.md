@@ -45,9 +45,10 @@
 |------|------|
 | **Backend** | Spring Boot |
 | **Frontend** | HTML5, CSS3, JavaScript |
-| **정적 리소스** | Spring Boot Static Resources (`/static/`) |
+| **정적 리소스** | Static Resources (`/static/`) |
 | **버전 관리** | Git / GitHub |
 | **배포** | GitHub Pages |
+| **IDE** | Spring Tool Suite4 (STS) |
 
 ---
 
